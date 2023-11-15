@@ -27,3 +27,16 @@ Some other goals / non-goals:
 * Make an API
   * Including batch classification
 * Not interested in ML/AI classification to begin with
+
+## Examples
+
+Run the project with Gradle and pass the file you want to parse as an argument, or omit to use the default provided (`data.csv`):
+
+```
+🥕 carrot 🗂 ~/git/peep 🐙 main $ ./gradlew run --args="data.private.csv" 
+
+> Task :app:run
+hello, peep
+loading data from file: "data.private.csv"
+read 5 values
+```
