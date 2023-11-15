@@ -39,12 +39,15 @@ Run the project with Gradle and pass the file you want to parse as an argument, 
 hello, peep
 loading data from file: "data.csv"
 read 5 rows (not including a header)
-normalised stats:
-  4 uniques (reduced by 1)
-  summing to 5 entries
-top 10:
+top 10 uncategorised:
   rabbit - 2
   bunny - 1
   bunny rabbit - 1
-  lopeared rabbit - 1
+  lop eared rabbit - 1
+top 10, accounting for categories and their aliases:
+  rabbit - 5
+normalised stats:
+  4 uniques (reduced by 1)
+  summing to 5 entries
+  with 5 category tags (1.00 average categories per entry)
 ```

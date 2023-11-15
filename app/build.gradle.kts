@@ -2,6 +2,7 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 plugins {
     id("org.jetbrains.kotlin.jvm") version "1.9.20"
+    id("org.jlleitschuh.gradle.ktlint") version "11.6.1"
     application
 }
 
