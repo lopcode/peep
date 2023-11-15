@@ -33,7 +33,7 @@ Some other goals / non-goals:
 Run the project with Gradle and pass the file you want to parse as an argument, or omit to use the default provided (`data.csv`):
 
 ```
-🥕 carrot 🗂  ~/git/peep 🐙 main $ ./gradlew run
+🥕 carrot 🗂  ~/git/peep 🐙 main $ ./gradlew run                          
 
 > Task :app:run
 hello, peep
@@ -47,7 +47,8 @@ top 10 uncategorised:
 top 10, accounting for categories and their aliases:
   rabbit - 5
 normalised stats:
-  4 uniques (reduced by 1)
-  summing to 5 entries
-  with 5 category tags (1.00 average categories per entry)
+  4 unique entries (reduction of 1 by normalisation)
+  with an uncategorised count of 5
+  and 1 resulting categories (reduction of 3 by categorisation)
+  with 5 categorisations (1.00 average categories per entry)
 ```

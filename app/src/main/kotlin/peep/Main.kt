@@ -70,7 +70,8 @@ fun main(args: Array<String>) {
     val categoriesReduction = (normalisedRows.keys.size - categoryCounts.keys.size).coerceAtLeast(0)
     println("normalised stats:")
     println("  ${normalisedRows.keys.size} unique entries (reduction of $uniquesReducedBy by normalisation)")
-    println("  and ${categoryCounts.keys.size} categories (reduction of $categoriesReduction by categorisation)")
+    println("  with an uncategorised count of $entryCount")
+    println("  and ${categoryCounts.keys.size} resulting categories (reduction of $categoriesReduction by categorisation)")
     println("  with $entryCategoryCount categorisations ($formattedAverageEntryCategoryCount average categories per entry)")
 }
 
