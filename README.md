@@ -33,10 +33,18 @@ Some other goals / non-goals:
 Run the project with Gradle and pass the file you want to parse as an argument, or omit to use the default provided (`data.csv`):
 
 ```
-🥕 carrot 🗂 ~/git/peep 🐙 main $ ./gradlew run --args="data.private.csv" 
+🥕 carrot 🗂  ~/git/peep 🐙 main $ ./gradlew run
 
 > Task :app:run
 hello, peep
-loading data from file: "data.private.csv"
-read 5 values
+loading data from file: "data.csv"
+read 5 rows (not including a header)
+normalised stats:
+  4 uniques (reduced by 1)
+  summing to 5 entries
+top 10:
+  rabbit - 2
+  bunny - 1
+  bunny rabbit - 1
+  lopeared rabbit - 1
 ```
