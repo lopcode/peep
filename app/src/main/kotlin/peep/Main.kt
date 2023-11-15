@@ -67,10 +67,11 @@ fun main(args: Array<String>) {
     val entryCategoryCount = categoryCounts.values.sum()
     val averageEntryCategoryCount = entryCategoryCount.toDouble() / entryCount.toDouble()
     val formattedAverageEntryCategoryCount = DecimalFormat("#.00").format(averageEntryCategoryCount)
+    val categoriesReduction = (normalisedRows.keys.size - categoryCounts.keys.size).coerceAtLeast(0)
     println("normalised stats:")
-    println("  ${normalisedRows.keys.size} uniques (reduced by $uniquesReducedBy)")
-    println("  summing to $entryCount entries")
-    println("  with $entryCategoryCount category tags ($formattedAverageEntryCategoryCount average categories per entry)")
+    println("  ${normalisedRows.keys.size} unique entries (reduction of $uniquesReducedBy by normalisation)")
+    println("  and ${categoryCounts.keys.size} categories (reduction of $categoriesReduction by categorisation)")
+    println("  with $entryCategoryCount categorisations ($formattedAverageEntryCategoryCount average categories per entry)")
 }
 
 private val whitespacePattern = """\s+""".toRegex()
