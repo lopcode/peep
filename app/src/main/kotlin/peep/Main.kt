@@ -9,9 +9,14 @@ import java.text.DecimalFormat
 fun main(args: Array<String>) {
     println("hello, peep")
 
-    val filename = args.firstOrNull()
+    val filename = args.getOrNull(0)
         ?: "data.csv"
     println("loading data from file: \"${filename}\"")
+
+    val topCount = args.getOrNull(1)
+        ?.toIntOrNull()
+        ?: 10
+        .coerceIn(1..1_000_000)
 
     val mapper = CsvMapper().apply {
         registerKotlinModule()
@@ -29,7 +34,6 @@ fun main(args: Array<String>) {
 
     val normalisedRows = normalise(entries)
 
-    val topCount = 10
     println("top $topCount uncategorised:")
     normalisedRows.entries
         .sortedByDescending { it.value }
